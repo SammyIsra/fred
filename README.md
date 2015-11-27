@@ -2,22 +2,30 @@
 
 Fred is our lazy Slack robot, based on Github's Hubot
 
-[Scripting guide]:https://github.com/github/hubot/blob/master/docs/scripting.md
-
 Note: the scripting guide is for Coffeescript, but the basics work with Javascript too.
 
 Fred  is currently hosted on Heroku, on the address https://serene-tundra-3291.herokuapp.com
 
 Fred is on the free version of Heroku, which means that it must sleep 6 hours a day. Right now, it is sleeping from **2am** to **9am**.
 
-##Interesting packages:
-* [hubot-heroku-keepalive][hubot-heroku-keepalive]
+####Interesting packages:
+* [hubot-heroku-keepalive][hubot-heroku-keepalive]:
 Tries to make our lazy robot not as lazy...
-* [hubot-slack][hubot-slack]
+* [hubot-slack][hubot-slack]:
 Adapter that allows us to use Hubot on Slack.
 
 [hubot-heroku-keepalive]: https://github.com/hubot-scripts/hubot-heroku-keepalive
 [hubot-slack]: https://github.com/slackhq/hubot-slack
+
+####Other links:
+* [Scripting guide][scripting-guide]: 
+Scripting guide for Hubot. *Examples are in Coffeescript, and this is not Slack specific*. The information could be more or less be translated to Javascript, I think.
+* [js2coffee][js2coffee]: 
+Website that translates Coffeescript to Javascript and viceversa.
+
+[scripting-guide]: https://hubot.github.com/docs/scripting/index.html
+[js2coffee]: http://js2.coffee/
+
 
 Anything below this line is the default Readme of Hubot.
 ******************************
