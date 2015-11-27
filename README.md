@@ -8,11 +8,11 @@ Note: the scripting guide is for Coffeescript, but the basics work with Javascri
 
 Fred  is currently hosted on Heroku, on the address https://serene-tundra-3291.herokuapp.com
 
-Fred is on the free version of Heroku, which means that it must sleep 6 hours a day. Right now, it is sleeping from 2am to 9am.
+Fred is on the free version of Heroku, which means that it must sleep 6 hours a day. Right now, it is sleeping from #2am# to #9am#.
 
 ##Interesting packages:
 * [hubot-heroku-keepalive][hubot-heroku-keepalive]
-Tries to make pur lazy robot not as lazy...
+Tries to make our lazy robot not as lazy...
 * [hubot-slack][hubot-slack]
 Adapter that allows us to use Hubot on Slack.
 
