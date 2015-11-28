@@ -7,10 +7,6 @@
 module.exports = function(robot){
 
 	robot.respond(/(?:roll (\d{1,4})+d(\d{1,4})+)/i, function(msg){
-
-		console.log("Got: ");
-		for(i in msg.match)
-			console.log(i + ": " + msg.match[i]);
 		
 		if(msg.match[1] < 1 || msg.match[1] > 2000 || msg.match[2] < 2 || msg.match[2] > 2000){
 			msg.reply("Sorry, I cannot calculate that"); 
