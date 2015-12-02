@@ -6,12 +6,17 @@
 module.exports = function(robot) {
 
 	robot.respond(/are you drunk(\?)?/i, function(msg){
-		var drunk = ["Yes", "Of course", "Just like Mannello... sometimes",
+		var drunk = [
+				"Yes", 
+				"Of course", 
+				"Just like Mannello... sometimes",
 				"I had no intentions of staying sober",
 				"Now I am the drunk people!",
 				"Your face is so... logical",
 				"But take a shot with me tho",
-				"If I were Camilo, I'd be talking in Spanish right now"]
+				"If I were Camilo, I'd be talking in Spanish right now",
+				"You a floozy!"
+				]
 		msg.send(drunk[Math.floor(Math.random()*drunk.length)]);
 	});
 }
