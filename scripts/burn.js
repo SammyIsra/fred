@@ -19,7 +19,8 @@ module.exports = function(robot){
 				"https://media.giphy.com/media/AJwnLEsQyT9oA/giphy.gif",
 				"http://static.comicvine.com/uploads/original/6/69852/3494642-bth_burn_zps519e93fb.gif",
 				"get rekt, son",
-				"https://media.giphy.com/media/3rgXBLrnjPRz3Q2Euc/giphy.gif"
+				"https://media.giphy.com/media/3rgXBLrnjPRz3Q2Euc/giphy.gif",
+				"OOOOOOH SHIIIIEEEEET SOOOOONNN"
 			];
 		
 		msg.send(burn[Math.floor(Math.random()*burn.length)]);
