@@ -1,5 +1,5 @@
 //Description
-//	Fuck Zach
+//	Fuck Zack
 //Commands
 //	Savage, Brutal
 
@@ -9,7 +9,7 @@ module.exports = function(robot){
 
 		var m = "";
 
-		for(var i=0 ; i<100 ; i++)
+		for(var i=0 ; i<5 ; i++)
 			m += `\n ${msg.envelope.user.name} said SAVAGE...`;
 		msg.send(m);
 	});
@@ -18,7 +18,7 @@ module.exports = function(robot){
 
 		var m = "";
 
-		for(var i=0 ; i<100 ; i++)
+		for(var i=0 ; i<5 ; i++)
 			m += `\n ${msg.envelope.user.name} said BRUTAL...`;
 
 		msg.send(m);   
