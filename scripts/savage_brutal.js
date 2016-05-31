@@ -9,8 +9,9 @@ module.exports = function(robot){
 
 		var m = "";
 
-		for(var i=0 ; i<5 ; i++)
+		for(var i=0 ; i<5 ; i++){
 			m += `\n ${msg.envelope.user.name} said SAVAGE...`;
+		}
 		msg.send(m);
 	});
 
