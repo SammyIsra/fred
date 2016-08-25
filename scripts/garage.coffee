@@ -2,9 +2,9 @@
 #   UCF Garage Occupancy Reporter
 #
 # Commands:
-#   garage	-	Displays percentage full of each garage in UCF
-#	where should I park?	-	Responds with the most open garage
-#	how full is garage (garage)	-	Responds with the percent full of the queried garage
+#   fred garage - Displays percentage full of each garage in UCF
+#	fred where should I park? - Responds with the most open garage
+#	fred how full is garage (garage) - Responds with the percent full of the queried garage
 #	
 # Author:
 #   Andrew Hopper (@hoppermeister)
@@ -52,12 +52,7 @@ module.exports = (robot) ->
 			
 			response = ""
 			for garage in garages
-				response += garage.garage + "\t"
-			  
-			response += "\n"
-			for garage in garages
-				response += garage.perc + "%\t\t"
-			  
+				response += garage.garage + "\t" + garage.perc + "%\n"
 
 
 			msg.send(response)
