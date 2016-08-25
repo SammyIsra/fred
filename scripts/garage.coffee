@@ -2,9 +2,9 @@
 #   UCF Garage Occupancy Reporter
 #
 # Commands:
-#   garage	-	Displays percentage full of each garage in UCF
-#	where should I park?	-	Responds with the most open garage
-#	how full is garage (garage)	-	Responds with the percent full of the queried garage
+#   fred garage - Displays percentage full of each garage in UCF
+#	fred where should I park? - Responds with the most open garage
+#	fred how full is garage (garage) - Responds with the percent full of the queried garage
 #	
 # Author:
 #   Andrew Hopper (@hoppermeister)
