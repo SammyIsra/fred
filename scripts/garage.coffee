@@ -52,7 +52,7 @@ module.exports = (robot) ->
 			
 			response = ""
 			for garage in garages
-				response += garage.garage + "\t" + garage.perc + "%\n"
+				response += garage.garage + "  " + garage.perc + "%\n"
 
 
 			msg.send(response)
