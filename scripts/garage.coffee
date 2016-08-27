@@ -17,7 +17,7 @@ module.exports = (robot) ->
 	cheerio = require('cheerio')
 
 
-	robot.respond /(how full is garage) (.*)?/i, (msg) ->
+	robot.respond /(how full is garage)\s([a-zA-Z]+)\??/i, (msg) ->
 		r = request 'https://secure.parking.ucf.edu/GarageCount/iframe.aspx/', (error, response, body) ->	
 			$ = cheerio.load(body);
 			garages = [];
