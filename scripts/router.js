@@ -5,12 +5,10 @@ module.exports = function(robot){
 
 	robot.router.post('/hello', function(req, res){
 				
+		//Because sometimes is a payload and sometimes not.. i dont fucking know
 		var data = (req.body.payload)? JSON.parse(req.body.payload) : req.body;
 		
-		//Sorry! I had to...
-		//robot.messageRoom("random", "Hello? Is anyone there? \nIt's... so cold here.");
-		
-		robot.messageRoom("random", data.message);
+		robot.messageRoom(data.room || "random", data.message);
 		res.send("OK");
 	});
 }
