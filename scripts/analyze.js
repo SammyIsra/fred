@@ -26,7 +26,7 @@ module.exports = function(robot){
 			});
 			
 			//Respond to caller
-			msg.reply(msg.envelope.user.name + message);
+			msg.reply(message);
 		})
 		.catch((err)=>{
 			//console.log(msg.envelope.user.name + " Error happened! " + err);
