@@ -15,7 +15,7 @@ module.exports = function(robot){
 		msg.send(`Gotchu. Will analize the text "${msg.match[1].trim()}"`);
 		
 		Watson.analyzeText(msg.match[1].trim())
-		.then(function(data){
+		.then((data)=>{
 			//console.log(data);
 			var message = "\n*The message that you asked me to analyze has the following scores:*";
 			data.document_tone.tone_categories.forEach((category) => {
@@ -26,11 +26,11 @@ module.exports = function(robot){
 			});
 			
 			//Respond to caller
-			msg.respond(msg.envelope.user.name + message);
+			msg.reply(msg.envelope.user.name + message);
 		})
-		.catch(function(err){
+		.catch((err)=>{
 			//console.log(msg.envelope.user.name + " Error happened! " + err);
-			msg.respond(err);
+			msg.reply(err);
 		});
 		//(need to set Watson keys and new project)
 		//Make call to Watson
