@@ -16,7 +16,7 @@ module.exports = function(robot){
 		
 		Watson.analyzeText(msg.match[1].trim())
 		.then(function(data){
-			console.log(data);
+			//console.log(data);
 			var message = "\n*The message that you asked me to analyze has the following scores:*";
 			data.document_tone.tone_categories.forEach((category) => {
 				message += `\n\n*For the ${category.category_name}*`;
@@ -29,7 +29,7 @@ module.exports = function(robot){
 			msg.respond(msg.envelope.user.name + message);
 		})
 		.catch(function(err){
-			console.log(msg.envelope.user.name + " Error happened! " + err);
+			//console.log(msg.envelope.user.name + " Error happened! " + err);
 			msg.respond(err);
 		});
 		//(need to set Watson keys and new project)
