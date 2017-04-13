@@ -29,7 +29,7 @@ module.exports = function(robot){
 			
 			axios.post('http://fred-analyze.us-east-1.elasticbeanstalk.com/api/sentiment/', report)
 			.then(function(data){
-				console.log(data);
+				msg.send(`Want a more detailed report? Check out http://fredanalyze.surge.sh/report/${data.data.id}`);
 			})
 			.catch(function(err){
 				console.log(err);
