@@ -3,6 +3,8 @@
 //Commands:
 //	fred analyze [text]
 
+var axios = require('axios');
+
 var Watson = require("./modules/Watson");
 
 
@@ -17,6 +19,22 @@ module.exports = function(robot){
 		Watson.analyzeText(msg.match[1].trim())
 		.then((data)=>{
 			//console.log(data);
+			
+			//report for the db
+			var report = {
+				text: msg.match[1].trim(),
+				analyzedBy: "Watson",
+				analysis: data
+			}
+			
+			axios.post('http://fred-analyze.us-east-1.elasticbeanstalk.com/api/sentiment/', report)
+			.then(function(data){
+				console.log(data);
+			})
+			.catch(function(err){
+				console.log(err);
+			})
+			
 			var message = "\n*The message that you asked me to analyze has the following scores:*";
 			data.document_tone.tone_categories.forEach((category) => {
 				message += `\n\n*For the ${category.category_name}*`;
