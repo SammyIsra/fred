@@ -13,6 +13,7 @@ module.exports = function(robot){
 	robot.respond(/pubsub/i, function(msg){
 		r = request('http://www.arepublixchickentendersubsonsale.com/', function(error, response, body){
 			$ = cheerio.load(body);
+			msg.send(">Are Publix Chicken Tender Subs on Sale?")
 			if($.html().includes("onsale:yes")){
 				msg.send(yesResponses[Math.floor(Math.random()*yesResponses.length)]);
 			}
