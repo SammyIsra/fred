@@ -8,18 +8,35 @@ module.exports = function(robot){
 
   //To listen to commands (fred x)
   robot.respond(/\+grievances\s(.+)/i, function(msg){
-    msg.send(`Grievance: ${msg.match[1]}`); //No mention
+    
+    const newGriev = msg.match[1].trim();
+    
+    if(newGriev.length < 2){
+      msg.send("Cmon, that's not a proper grievance!");
+      return;
+    }
+    
+    msg.send(`Adding grievance: ${newGriev}`); //No mention
+    grief.postNewGrievance(newGriev)
+    .then(x => {
+      console.log("Success!", x);
+    })
+    .catch(e => {
+      msg.send("Uh oh, there was an error (pinging @sammy)");
+      console.error(e);
+    });
   });
   
-  robot.respond(/\+grievances/i, function(msg){
+  
+  robot.respond(/\+grievances\s?$/i, function(msg){
     grief.getGrievances()
     .then(data => {
       const list = data.map(x => `\n-${x}`);
       msg.send("Grievances:\n" + list);
     })
     .catch((err) => {
-      console.log("Oh no!", err);
-    })
-  })
-
+      msg.send("Uh oh, there was an error (pinging @sammy)");
+      console.error(err);
+    });
+  });
 }
