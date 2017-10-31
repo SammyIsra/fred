@@ -13,7 +13,9 @@ module.exports = function(robot){
         
         if(!key){
             console.log("warning: no weather API key present");
-            return msg.send("Sorry, I can't do that. I have no valid OpenWeatherMap API key.");
+            console.log(process.env);
+            const apiKeys = (Object.keys(process.env)).filter(key => key.includes("API") || key.includes("KEY"));
+            return msg.send(`Sorry, I can't do that. I have no valid OpenWeatherMap API key\n${apiKeys}\n(${process.env.WEATHERAPI_KEY})`);
         }
             
         
