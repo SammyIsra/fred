@@ -2,7 +2,6 @@
 //	Cute bomb is the cutest script
 //Commands:
 //	fred cute me
-//	fred cute bomb
 //	fred cute bomb N
 
 module.exports = function(robot){
@@ -15,7 +14,9 @@ module.exports = function(robot){
 				return;
 			}
 			
-			msg.send( (JSON.parse(body).data.children)[Math.floor(Math.random()*(JSON.parse(body).data.children).length)].data.url);
+			var json = JSON.parse(body).data.children;
+			
+			msg.send( json[random].data.url);
 		});
 	
 	});
@@ -31,8 +32,15 @@ module.exports = function(robot){
 				return;
 			}
 			
+			var json = JSON.parse(body).data.children;
+			
+			
 			for(var i = 0; i < count; i++){
-				msg.send( (JSON.parse(body).data.children)[Math.floor(Math.random()*(JSON.parse(body).data.children).length)].data.url);
+				var random = Math.floor(Math.random()*json.length);
+				msg.send( json[random].data.url);
+				if(json.length > 1){
+					json.splice(random, 1);
+				}
 			}
 		});
 	});
