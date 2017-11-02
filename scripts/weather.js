@@ -2,6 +2,7 @@
 //  Get weather information for a given city
 //Commands:
 //  fred weather [city]
+//  fred tomorrow's weather [city]
 
 const axios = require("axios");
 
