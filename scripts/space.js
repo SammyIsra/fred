@@ -1,8 +1,7 @@
 //Description
 //  Get information about people in space
 //Commands
-//  fred who is in space (<optional> right now)
-//  fred where is the ISS
+//  fred who is in space?
 
 const axios = require("axios");
 const PeopleInSpaceUrl = "http://api.open-notify.org/astros.json";
