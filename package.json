@@ -30,5 +30,8 @@
   },
   "scripts": {
     "dev": "./bin/hubot"
+  },
+  "devDependencies": {
+    "prefly": "0.1.0"
   }
 }
