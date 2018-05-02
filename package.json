@@ -7,7 +7,7 @@
   "dependencies": {
     "aws-sdk": "^2.130.0",
     "axios": "^0.16.1",
-    "cheerio": "0.7.0",
+    "cheerio": "1.0.0-rc.2",
     "hubot": "^2.17.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
@@ -26,9 +26,13 @@
     "watson-developer-cloud": "^2.18.0"
   },
   "engines": {
-    "node": "4.1.1"
+    "node": "^8.11.1"
   },
   "scripts": {
     "dev": "./bin/hubot"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "prefly": "0.1.0"
   }
 }

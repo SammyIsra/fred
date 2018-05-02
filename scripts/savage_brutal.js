@@ -22,6 +22,6 @@ module.exports = function(robot){
 		for(var i=0 ; i<5 ; i++)
 			m += `\n ${msg.envelope.user.name} said BRUTAL...`;
 
-		msg.send(m);   
+		msg.send(m);
 	});
 };
