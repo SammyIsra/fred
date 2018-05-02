@@ -26,7 +26,7 @@
     "watson-developer-cloud": "^2.18.0"
   },
   "engines": {
-    "node": ">8.11.1"
+    "node": "^8.11.1"
   },
   "scripts": {
     "dev": "./bin/hubot"
