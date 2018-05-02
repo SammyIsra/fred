@@ -2,6 +2,18 @@
 
 Fred is our lazy Slack robot, based on Github's Hubot
 
+To locally develop Fred, first install all dependencies via npm:
+```
+npm install
+```
+
+Then to Fred locally, run:
+```
+npm run dev
+```
+
+FYI, I had a better experience running this on WSL since I'm on a Windows. 
+
 Note: the scripting guide is for Coffeescript, but the basics work with Javascript too.
 
 Fred  is currently hosted on Heroku, on the address https://serene-tundra-3291.herokuapp.com
