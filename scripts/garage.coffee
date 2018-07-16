@@ -33,7 +33,7 @@ module.exports = (robot) ->
 			if smallest > 90
 				response += "http://i.imgur.com/OXlUFE1.jpg\n"
 			if pubsub
-				response += "<www.arepublixchickentendersubsonsale.com | But hey, <Chicken Tender Subs are on sale!>"
+				response += "But hey, Chicken Tender Subs are on sale! | www.arepublixchickentendersubsonsale.com"
 
 			msg.send(response)
 
