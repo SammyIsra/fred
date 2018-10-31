@@ -8,7 +8,7 @@
     "aws-sdk": "2.345.0",
     "axios": "^0.16.1",
     "cheerio": "1.0.0-rc.2",
-    "hubot": "^2.17.0",
+    "hubot": "3.1.1",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
@@ -20,10 +20,10 @@
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^3.4.2",
+    "hubot-slack": "4.5.5",
     "q": "^1.4.1",
     "request": "2.88.0",
-    "watson-developer-cloud": "^2.18.0"
+    "watson-developer-cloud": "3.13.0"
   },
   "engines": {
     "node": "^8.11.1"
