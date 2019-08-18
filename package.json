@@ -22,7 +22,7 @@
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.4.2",
     "q": "^1.4.1",
-    "request": "~2.53.0",
+    "request": "~2.68.0",
     "watson-developer-cloud": "^2.18.0"
   },
   "engines": {
